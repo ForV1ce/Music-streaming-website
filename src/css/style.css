@@ -1,0 +1,521 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+body {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left,#302b63,#0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 25px 25px;
+}
+
+
+
+.logo .logo_img img {
+   width: 200px;
+  display: inline-block;
+}
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    display: none;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 3px 0px 10px 6px #0f0c29;
+    
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,#ffc107);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+   
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,#ffc107);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+    
+}
+
+@keyframes animate
+ {
+    0% 
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.form {
+    position: absolute;
+    inset: 2px;
+    border-radius: 9px;
+    background: linear-gradient(to left,#1b1744,#0f0c29);
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.form h2 {
+    color: #ffc107;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.InputBox {
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+    
+}
+
+.InputBox input {
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #28292a;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    z-index: 10;
+}
+
+
+.InputBox span {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    font-size: 1em;
+    color: #8f8f8f;
+    pointer-events: none;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.InputBox input:valid ~ span,
+.InputBox input:focus ~ span
+{
+    color: #ffc107;
+    transform:translateX(0px) translateY(-34px);
+    font-size: 0.75em;
+}
+
+.InputBox i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffc107;
+    border-radius: 4px;
+    transition: 0.5s;
+    pointer-events: none;
+    z-index: 9;
+}
+
+.InputBox input:valid ~ i,
+.InputBox input:focus ~ i {
+    height: 44px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+}
+
+.links a:hover,
+.links a:nth-child(2)
+{
+    color: #ffc107;
+}
+
+input[type="submit"] 
+{
+    border: none;
+    outline: none;
+    background: #ffc107;
+    padding: 11px 25px;
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+   
+}
+ 
+
+
+.popup_btn {
+    margin: 30px 30px;
+}
+
+
+.registration_form .reg_box {
+    position: relative;
+    width: 380px;
+    height: 500px;
+    display: none;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 0 auto;
+    box-shadow: 3px 0px 10px 6px #0f0c29;
+    
+}
+
+.reg_box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 500px;
+    background: linear-gradient(0deg,transparent,#ffc107);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    
+}
+
+.reg_box::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 500px;
+    background: linear-gradient(0deg,transparent,#ffc107);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+    
+}
+   
+.registration_form input[type="submit"] 
+{
+    border: none;
+    outline: none;
+    background: #ffc107;
+    padding: 11px 25px;
+    width: 150px;
+    margin-top: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    
+   
+}
+
+
+
+
+.music_player {
+    -webkit-filter: drop-shadow(0px 0px 0px #222);
+    filter: drop-shadow(14px 14px 7px  #222);
+    
+}
+  
+  @keyframes showElement {
+  from {
+  opacity: 0;
+  transform: translateY(80px);
+  }
+  to {
+  opacity: 1;
+  transform: translateY(0);
+  }
+  }
+
+
+
+.player {
+    height: 125vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("/src/img/Grunge-frame-design-on-transparent-background-PNG.png"); 
+    animation: backgroundimg 1s ease-in forwards;
+    color: #ffc107;
+    background-size: cover;
+    background-position: center;
+}
+
+@keyframes backgroundimg {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  }
+
+  
+  .details {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+    animation: showElement 1s forwards;
+  }
+  
+  .track-art {
+    margin: 25px;
+    height: 250px;
+    width: 250px;
+    background-image: url("https://w0.peakpx.com/wallpaper/973/584/HD-wallpaper-girl-headphones-phone-candy-pink-anime.jpg");
+    background-size: cover;
+    border-radius: 15%;
+    animation: showElement 1s forwards;
+  }
+  
+  .now-playing {
+    font-size: 1rem;
+    animation: showElement 1s forwards;
+  }
+  
+  .track-name {
+    font-size: 3rem;
+    animation: showElement 1s forwards;
+  }
+  
+  .track-artist {
+    font-size: 1.5rem;
+    animation: showElement 1s forwards;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: showElement 1s forwards;
+  }
+  
+  .playpause-track, .prev-track, .next-track {
+    padding: 25px;
+    opacity: 0.8;
+    animation: showElement 1s forwards;
+    /* Smoothly transition the opacity */
+    transition: opacity .2s;
+  }
+  
+  .playpause-track:hover, .prev-track:hover, .next-track:hover {
+    opacity: 1.0;
+    animation: showElement 1s forwards;
+  }
+  
+  .slider_container {
+    width: 75%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: showElement 1s forwards;
+
+  }
+  
+  /* Modify the appearance of the slider */
+  .seek_slider, .volume_slider {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: black;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    animation: showElement 1s forwards;
+
+  }
+  
+  /* Modify the appearance of the slider thumb */
+  .seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+    animation: showElement 1s forwards;
+  }
+  
+  .seek_slider:hover, .volume_slider:hover {
+    opacity: 1.0;
+    animation: showElement 1s forwards;
+  }
+  
+  .seek_slider {
+    width: 60%;
+    animation: showElement 1s forwards;
+  }
+  
+  .volume_slider {
+    width: 30%;
+    animation: showElement 1s forwards;
+  }
+  
+  .current-time, .total-duration {
+    padding: 10px;
+    animation: showElement 1s forwards;
+  }
+  
+  i.fa-volume-down, i.fa-volume-up {
+    padding: 10px;
+    animation: showElement 1s forwards;
+  }
+  
+  i.fa-play-circle, i.fa-pause-circle, i.fa-step-forward, i.fa-step-backward {
+    cursor: pointer;
+  }
+
+  .box {
+    animation: form-appear 1s ease-out forwards;
+  }
+  
+  @keyframes form-appear {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  .reg_box {
+    animation: reg_box 1s ease-out forwards;
+  }
+  
+  @keyframes reg_box {
+    0% {
+      opacity: 0.2;
+      transform: translateY(-50px);
+    }
+    50% {
+      opacity: 0.6;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.music_btn .player_btn {
+   position: relative;
+   margin-top: 200px;
+   
+}
+
+.player {
+  position: relative;
+  display: none;
+  
+}
+
+
+
+.close-container {
+  position: relative;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.leftright {
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: #ffc107;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  transition: all .3s ease-in;
+  -webkit-filter: drop-shadow(2px 2px 6px  #ffc107);;
+  filter: drop-shadow(1px 1px 18px  #ffc107);
+}
+
+.rightleft {
+  height: 4px;
+  width: 50px;
+  position: absolute;
+  margin-top: 24px;
+  background-color: #ffc107;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  transition: all .3s ease-in;
+  -webkit-filter: drop-shadow(2px 2px 6px  #ffc107);;
+  filter: drop-shadow(1px 1px 18px  #ffc107);
+}
+
+label {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif; 
+  font-size: .6em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all .3s ease-in;
+  opacity: 0;
+  -webkit-filter: drop-shadow(1px 1px 6px white);;
+  filter: drop-shadow(1px 1px 10px white);
+}
+.close {
+  margin: 60px 0 0 5px;
+  position: absolute;
+}
+
+
+.close-container:hover .leftright {
+  transform: rotate(-45deg);
+  background-color: #F25C66;
+  -webkit-filter: drop-shadow(2px 2px 6px  #F25C66);;
+  filter: drop-shadow(2px 2px 7px  #F25C66);
+}
+.close-container:hover .rightleft {
+  transform: rotate(45deg);
+  background-color: #F25C66;
+  -webkit-filter: drop-shadow(2px 2px 6px  #F25C66);;
+  filter: drop-shadow(2px 2px 7px  #F25C66);
+}
+.close-container:hover label{
+  opacity: 1;
+}
+
