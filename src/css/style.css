@@ -264,11 +264,12 @@ input[type="submit"]
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-image: url("/src/img/Grunge-frame-design-on-transparent-background-PNG.png"); 
+    background-image: url("../img/playerbackground.png"); 
     animation: backgroundimg 1s ease-in forwards;
     color: #ffc107;
     background-size: cover;
     background-position: center;
+    
 }
 
 @keyframes backgroundimg {
@@ -300,6 +301,8 @@ input[type="submit"]
     background-size: cover;
     border-radius: 15%;
     animation: showElement 1s forwards;
+    -webkit-filter: drop-shadow(0px 0px 0px white);
+    filter: drop-shadow(0px 0px 7px  white);
   }
   
   .now-playing {
